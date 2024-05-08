@@ -1,4 +1,3 @@
-
 const service = require('./file.service');
 
 exports.list = async (req, res, next) => {
@@ -7,7 +6,5 @@ exports.list = async (req, res, next) => {
     res.json(list);
   } catch (error) {
     next(error);
-
-    
   }
-}
+};

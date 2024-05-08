@@ -14,3 +14,9 @@ exports.list = async () => {
   list = await Promise.all(list);
   return list;
 };
+
+exports.upload = async (files) => {
+  const { file } = files;
+  const filePath = path.join(constants.path.storage, file.name);
+  await file.mv(filePath);
+};
